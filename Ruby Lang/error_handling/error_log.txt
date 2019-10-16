@@ -1,0 +1,3 @@
+Error: undefined method `+' for nil:NilClass at 2019-10-16 10:18:14 -0600
+Error: undefined method `*' for nil:NilClass at 2019-10-16 10:19:12 -0600
+Error: divided by 0 at 2019-10-16 10:19:25 -0600
