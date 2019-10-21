@@ -10,5 +10,6 @@
     <%= image_tag showcase_item.thumb_image unless showcase_item.thumb_image.nil? %>
 
     <%= link_to "Edit", edit_showcase_path(showcase_item.id) %>
+    <%= link_to 'Delete Showcase Item', showcase_path(showcase_item.id), method: :delete, data: { confirm: 'Are you sure?' } %>
     
 <% end %>
