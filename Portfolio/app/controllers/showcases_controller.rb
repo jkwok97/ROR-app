@@ -27,7 +27,7 @@ class ShowcasesController < ApplicationController
 
     def update
         @showcase_item = Showcase.find(params[:id])
-        
+
         respond_to do |format|
           if @showcase_item.update(params.require(:showcase).permit(:title, :subtitle, :body))
             format.html { redirect_to showcases_path, notice: 'ShowCase Item was successfully updated.' }
@@ -37,6 +37,10 @@ class ShowcasesController < ApplicationController
             format.json { render json: @showcase_item.errors, status: :unprocessable_entity }
           end
         end
+    end
+
+    def show
+        @showcase_item = Showcase.find(params[:id])
     end
 
 end
